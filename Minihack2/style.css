@@ -1,0 +1,448 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding-top: 20px;
+    margin: 0 40px auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+h2 {
+    margin: 30px 0;
+}
+
+.nav__part {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+}
+
+.Nav {
+    background-color: #242529;
+    height: 60px;
+    display: grid;
+    /* justify-items: center; */
+    align-items: center;
+}
+
+.navurl {
+    list-style: none;
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* justify-content: space-around; */
+    gap: 30px;
+    /* justify-self: end; */
+}
+
+.outer__nav__url {
+    display: grid;
+    justify-content: end;
+}
+
+.nav1 {
+    /* background-color: green; */
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    
+
+}.nav2 {
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+}
+.outer__nav__url1 {
+    display: grid;
+    justify-content: center;
+}
+.nav3 {
+    /* background-color: yellow; */
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.outer__nav__url2 {
+    display: grid;
+    justify-content: end;
+}
+
+.button_div{
+    display: grid;
+    justify-self: start;
+    
+}
+
+.Contact {
+    border: none;
+    border-radius: 30px;
+    margin: 8px;
+    padding: 6px 22px;
+    background-color: #5790a1;
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+/* Exersize Second 
+------------------------------------------------------------
+------------------------------------------------------------
+*/
+
+img {
+    width: 100%;
+}
+
+.card {
+    /* width: 60% ; */
+    margin: 10px 80px auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 30px;
+}
+
+.outer__box {
+    height: 370px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 0 3px 0 gray, 0 0 6px 0 gray;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+.name   {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.image img {
+    /* width: 150px; */
+    height: 220px;
+
+
+}
+.image__text {
+    height: 50px;
+    width: 50px;
+
+}
+.image__text img {
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    
+}
+
+.img__text {
+    display: flex;
+    align-items: center;
+}
+.img__text p {
+    font-size: 18px;
+}
+
+.add__friend button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    background-color: #4871d5;
+    color: white;
+    font-size: 18px;
+}
+
+
+/* section four 
+--------------------------------------------------------
+--------------------------------------------------------
+*/
+
+.mini__card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.outer4 {
+    display: grid;
+    width: 550px;
+    height: auto;
+    grid-template-columns: 6fr 2fr;
+
+}
+
+.img__content {
+    display: flex;
+    gap: 20px;
+}
+
+.img__content img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.content4 {
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: 1fr; */
+    gap: 2px;
+    justify-content: center;
+    align-items: start;
+}
+
+.name1 {
+    font-size: 22px;
+    font-weight: bold;
+    /* margin-top: 8px; */
+}
+
+.bio {
+    font-size: 18px;
+    color: gray;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn button {
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(89,145,224);
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white; 
+}
+
+/* Exersize five  
+---------------------------------------------------------
+-------------------------------------------------------
+*/
+
+.outer5 {
+    font-family: 'fira', 'sans-serif';
+    /* font-family: ,'times new roman', 'arial'; */
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 700px;
+    height: auto;
+    border: 2px solid gray;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.bgimg {
+    /* width: 100%; */
+    height: 150px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.bongo {
+    width: 180px;
+    height: 60px;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #ff6d34;
+    position: relative;
+    z-index: 10;
+    background: transparent;
+}
+
+.bongodev {
+    position: relative;
+}
+
+.dev {
+    font-size: 50px;
+    font-weight: bolder;
+    color: white;
+    position: absolute; 
+    /* right: 10px; */
+    left: 120px;
+    /* top: 110px; */
+    bottom: 0px;
+    /* z-index: 3px; */
+}
+
+.img__txt1 {
+    position: relative;
+}
+
+.logo1 {
+    position: absolute;
+    top: 50px;
+    left: 250px;
+}
+
+.logo_signup {
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+    /* justify-items: center; */
+    align-items: center;
+}
+
+.logo__txt {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.txt {
+    color: white;
+}
+.first {
+    font-weight: bolder;
+    font-size: 25px;
+    color: white;
+}
+.second {
+    /* display: inline; */
+    font-size: 18px;
+    color: rgb(184, 182, 182);
+}
+
+.logo {
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+    background-color: #051535;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    height: 20px;
+    width: 80px;
+    /* border-radius: 50%; */
+    /* width: 100%; */
+    background-size: cover;
+}
+
+
+.signup button {
+    border: none;
+    border-radius: 30px;
+    background-color: #ff6d34;
+    padding: 10px 30px;
+    font-size: 18px;
+    color: black; 
+    font-weight: bold;
+}
+
+
+
+/* section third
+--------------------------------------------------------
+--------------------------------------------------------
+*/
+
+.youtube {
+    background-color: black;
+    width: 750px;
+    padding: 10px;
+}
+
+.outer3 {
+    display: flex;
+    gap: 20px;
+    align-items: start;
+    width: 100%;
+    /* background-color: black; */
+    margin: 20px;
+}
+
+.vedio {
+    width: 320px;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.container {
+    width: 320px;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    position: relative;
+    border-radius: 10px;
+
+    background-color: green;
+}
+
+.pp1 {
+    position: absolute;
+    width: 100%;
+    bottom: 1px;
+    right: 0px;
+    border-radius: 10px;
+}
+
+.container img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    background-size: contain;
+}
+
+/* .pp {
+    width: 100%;
+} */
+.prograss {
+    width: 100%;
+    height: 5px;
+    background-color: gray;
+    border-radius: 10px;
+}
+.inner {
+    width: 50%;
+    height: 5px;
+    background-color: red;
+}
+
+.pp {
+    position: relative;
+    width: 100%;
+    /* height: 20px; */
+    border-radius: 10px;
+}
+
+.time {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    background-color: #0a1017;
+    padding: 2px 5px;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+}
+
+
+.discription {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.chanel__name {
+    font-size: 20px;
+    color: gray;
+}
