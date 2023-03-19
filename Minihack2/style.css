@@ -357,7 +357,7 @@ img {
 
 .youtube {
     background-color: black;
-    width: 750px;
+    width: 780px;
     padding: 10px;
 }
 
@@ -384,7 +384,10 @@ img {
     position: relative;
     border-radius: 10px;
 
-    background-color: green;
+    /* background-color: green; */
+
+    overflow: hidden;
+    border: 0px;
 }
 
 .pp1 {
@@ -400,6 +403,7 @@ img {
     height: 180px;
     border-radius: 10px;
     background-size: contain;
+    
 }
 
 /* .pp {
@@ -413,6 +417,11 @@ img {
 }
 .inner {
     width: 50%;
+    height: 5px;
+    background-color: red;
+}
+.inner1 {
+    width: 10%;
     height: 5px;
     background-color: red;
 }
