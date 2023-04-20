@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <main id="hi">
+      <header>
+        <h1>Task List</h1>
+        <div id="new-task-form">
+          <input
+            type="text"
+            id="task-details-input"
+            placeholder="What do you have planned?"
+          />
+          <!-- <br> -->
+          <div class="date-time">
+            <input
+              type="date"
+              placeholder="dd/mm/yyyy"
+              id="date1"
+              value=""
+              min="2023-01-01"
+              max="2030-12-31"
+              name="begin"
+            />
+            <input type="time" id="time1" />
+
+            <input
+              type="submit"
+              value="Add Task"
+              id="new-task-submit"
+              onclick="addingTask()"
+            />
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <h2>Tasks</h2>
+        <div id="task-list">
+          <!-- <div id="main-div">
+            <div id="tasks">
+              <input type="checkbox" id="ckbox" />
+              <div class="content">
+                <input
+                  type="text"
+                  class="text"
+                  value="My necessary task "
+                  readonly
+                />
+              </div>
+              <div class="action">
+                <button class="edit">EDIT</button>
+                <button class="delet">DELETE</button>
+              </div>
+            </div>
+            <div id="show-date-time">
+              <input type="date" class="dt" readonly />
+              <input type="time" class="tm" readonly />
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+
+    <!-- <div class="input_title_date">
+        <div class="title_box">
+            <label for="title">Task Title: </label>
+            <textarea id="title" name="title_recive" id="" cols="50" rows="5"></textarea>
+        </div>
+        <div class="date_box">
+            <label for="date">Deadline: </label>
+            <input type="date" id="date" name="date_recive">
+        </div>
+        <div class="button_box">
+            <button id="addTask">Add Task</button>
+        </div>
+    </div> -->
+    <script src="Java Script/index.js"></script>
+  </body>
+</html>
