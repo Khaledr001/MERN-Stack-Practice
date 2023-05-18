@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+    --orange: orange;
+}
+
+body {
+    margin: auto 10% ;
+    background-color: var(--grey);
+    height: 100vh;
+    color: var(--light);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: gray; */
+}
+.logo img{
+    /* background-color: red ; */
+    /* height: 150px; */
+}
+
+.logo h1{
+    font-size: 2rem;
+    background-image: linear-gradient(to right, var(--pink), var(--purple), orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-item {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+}
+
+.nav-item button {
+    background-color: orange;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 8px 30px;
+    border-radius: 10px;
+    background-image: linear-gradient(to ri);
+    background-image: linear-gradient(to right, var(--pink), var(--purple), orange);
+    /* -webkit-background-clip:padding-box;
+    -webkit-text-fill-color: transparent; */
+}
+
+.nav-item button:hover {
+    cursor: pointer;
+    color: var(--darkest);
+    background-image: none;
+}
+
+
+.nav-item ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 1.1rem;
+    align-items: center;
+
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    /* background-color: var(--dark); */
+    /* padding: 5px; */
+}
+
+ul li a:hover {
+    color: var(--orange);
+}
+
+
+main{
+    margin-top: 50px;
+    display: flex;
+}
+
+.image {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    /* background-color: orange; */
+    
+}
+
+.image img {
+    width: 100%;
+    height: 300px;
+    /* width: auto; */
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.shtml{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: ; */
+
+
+}
+.outter {
+    /* background-color: red; */
+    width: 500px;
+    height: 6px;
+    border: 1px solid orange
+    /* opacity: 0.5; */
+}
+.inner {
+    background-color: orange;
+    height: 5px;
+}
+
+.shtml .inner {
+    width: 70%;
+}
+.js .inner {
+    width: 60%;
+}
+.css .inner {
+    width: 60%;
+}
+.c .inner {
+    width: 80%;
+}
+.python .inner {
+    width: 70%;
+}
+.flutter .inner {
+    width: 50%;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+.skill {
+    margin-bottom: 10px;
+}
+.skills-content {
+    margin: 10px 0;
+}
