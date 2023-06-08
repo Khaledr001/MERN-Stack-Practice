@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="font-poppins bg-bodyColor text-textColor pt-20 h-screen">
+    <nav
+      class="h-20 bg-navbarColor flex lg:gap-10 justify-between items-center fixed top-0 left-0 w-screen">
+      <div class="w-fit p-3">
+        <a href="#">
+          <img src="assets/image_vault pic.png" alt="" />
+        </a>
+      </div>
+      <div class="w-1/2 lg:w-4/5 ml-5 lg:p-2">
+        <div
+          class="w-3/12 lg:w-3/4 text-gray-400 text-base flex items-center relative focus-within:text-gray-200">
+          <i class="bx bx-search w-6 absolute m-4"></i>
+          <form action="" class="w-full">
+            <input
+              type="text"
+              class="lg:w-full bg-gray-700 rounded-md border-none focus:ring-1 focus-ring-gray-500 h-10 pr-20 ml-1 pl-9 py-1"
+              placeholder="Search file..." />
+          </form>
+          <div class="hidden lg:block" >
+            <div class="absolute right-0 top-1 flex items-center ">
+            <button
+              class="bx bx-x text-xl leading-5 px-2 mr-2 border-r-2 border-slate-400"></button>
+
+            <p class="text-base">68461 Files</p>
+            <i class="bx bx-chevron-up bx-rotate-180 text-xl"></i>
+          </div>
+          </div>
+          
+        </div>
+
+        <div class="flex ml-2 gap-4 h-2 text-xs text-gray-400">
+          <div class="flex items-center gap-1 h-fit">
+            <p>Size</p>
+            <i class="bx bxs-right-arrow"></i>
+          </div>
+          <div class="flex items-center gap-1 h-fit">
+            <p>Orientation</p>
+            <i class="bx bxs-right-arrow"></i>
+          </div>
+          <div class="flex items-center gap-1 h-fit">
+            <p>Metadata</p>
+            <i class="bx bxs-right-arrow"></i>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="p-5 mr-2 flex justify-end gap-3 text-gray-400 text-base w-2/4">
+        <div class="flex gap-1 items-center cursor-pointer hover:text-white">
+          <i class="bx bxs-cog bx-rotate-180 text-base"></i>
+          <p class=" hidden md:block lg:block">Advanced Settings</p>
+        </div>
+
+        <div class="flex items-center gap-1 cursor-pointer hover:text-white">
+          <i class="bx bxs-user text-base"></i>
+          <p class="hidden md:block lg:block">Khaled</p>
+        </div>
+      </div>
+    </nav>
+
+    <section class=" h-[97%] flex justify-between">
+      <!-- left-nav -->
+      <section
+        class="h-full text-gray-400 bg-sidebarColor basis-1/6 hidden md:hidden lg:block">
+        <div
+          class="ml-2 h-10 text-gray-300 flex items-center gap-1 cursor-pointer hover:text-white">
+          <i class="bx bxs-cloud-upload text-xl"></i>
+          <p class="text-base">Import files...</p>
+        </div>
+        <div
+          class="w-full h-12 flex gap-2 items-end p-1 pb-0 bg-navbarColor text-xs">
+          <p
+            class="rounded-t-md text-sm h-8 px-2 pt-1 bg-sidebarColor cursor-pointer hover:text-white">
+            Categories
+          </p>
+          <p class="text-sm p-1 h-8 cursor-pointer hover:text-white">Lobrary</p>
+          <p class="h-8 p-1 text-sm cursor-pointer hover:text-white">
+            Agreements
+          </p>
+        </div>
+        <div class="mt-3 px-2 flex gap-3 justify-start items-center text-base">
+          <div class="flex gap-1 items-center cursor-pointer hover:text-white">
+            <span class="material-symbols-outlined align-middle text-base">
+              folder
+            </span>
+            <p>Categories</p>
+          </div>
+          <div class="flex gap-1 items-center cursor-pointer hover:text-white">
+            <span class="material-symbols-outlined align-middle text-xl">
+              toggle_off
+            </span>
+            <p>Extended search</p>
+          </div>
+        </div>
+
+        <div class="w-4/5 mt-4 ml-4">
+          <form>
+            <label
+              for="default-search"
+              class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+              >Search</label
+            >
+            <div class="relative">
+              <input
+                type="search"
+                id="default-search"
+                class="block w-full p-3 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Serch Catagory"
+                required />
+              <button
+                type="submit"
+                class="text-white absolute right-2.5 bottom-2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <svg
+                  aria-hidden="true"
+                  class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="flex flex-col gap-1 mt-5 text-base">
+          <div
+            class="flex gap-1 items-center ms-6 cursor-pointer hover:text-white">
+            <span class="text-base material-symbols-outlined">
+              check_box_outline_blank
+            </span>
+            <p>EmailGraphics</p>
+          </div>
+          <div
+            class="ms-6 flex gap-1 items-center cursor-pointer hover:text-white">
+            <span class="text-base material-symbols-outlined">
+              check_box_outline_blank
+            </span>
+            <p>Interest</p>
+          </div>
+          <div
+            class="flex ms-6 gap-1 items-center cursor-pointer hover:text-white">
+            <span class="text-base material-symbols-outlined">
+              check_box_outline_blank
+            </span>
+            <p>Leading Page</p>
+          </div>
+          <div
+            class="flex ms-6 gap-1 items-center cursor-pointer hover:text-white">
+            <span class="text-base material-symbols-outlined">
+              check_box_outline_blank
+            </span>
+            <p>People</p>
+          </div>
+          <div
+            class="flex ms-1 gap-1 items-center cursor-pointer hover:text-white">
+            <span class="text-base material-symbols-outlined">
+              arrow_right
+            </span>
+            <span class="text-base material-symbols-outlined">
+              check_box_outline_blank
+            </span>
+            <p>Peyton</p>
+          </div>
+          <div
+            class="flex ms-6 gap-1 items-center cursor-pointer hover:text-white">
+            <span class="text-base material-symbols-outlined">
+              check_box_outline_blank
+            </span>
+            <p>Staff</p>
+          </div>
+          <div
+            class="flex ms-1 gap-1 items-center cursor-pointer hover:text-white">
+            <span class="text-base material-symbols-outlined">
+              arrow_right
+            </span>
+            <span class="text-base material-symbols-outlined">
+              check_box_outline_blank
+            </span>
+            <p>Tips</p>
+          </div>
+          <div
+            class="flex ms-6 gap-1 items-center cursor-pointer hover:text-white">
+            <span class="text-base material-symbols-outlined">
+              check_box_outline_blank
+            </span>
+            <p>User</p>
+          </div>
+          <div
+            class="flex ms-6 gap-1 items-center cursor-pointer hover:text-white">
+            <span class="text-base material-symbols-outlined">
+              check_box_outline_blank
+            </span>
+            <p>Video</p>
+          </div>
+          <div
+            class="flex ms-1 gap-1 items-center cursor-pointer hover:text-white">
+            <span class="text-base material-symbols-outlined">
+              arrow_right
+            </span>
+            <span class="text-base material-symbols-outlined">
+              check_box_outline_blank
+            </span>
+            <p>Web</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- body section -->
+      <section
+        class="flex flex-col h-full w-full pb-5 grow gap-2 px-2 basis-4/6">
+        <div
+          class="flex text-gray-300 justify-between px-2 h-10 bg-sidebarColor">
+          <div class="hidden md:block lg:block">
+            <div class="flex md:gap-1 lg:gap-3">
+            <div
+              class="flex items-center gap-1 cursor-pointer hover:text-white">
+              <i class="bx bxs-arrow-to-top text-xl"></i>
+              <p class="text-sm">Publish</p>
+            </div>
+            <div
+              class="flex items-center gap-1 cursor-pointer hover:text-white">
+              <i class="bx bxs-arrow-to-top bx-rotate-180 text-xl"></i>
+              <p class="text-sm">Download</p>
+            </div>
+            <div
+              class="flex items-center gap-1 cursor-pointer hover:text-white">
+              <i class="bx bx-git-merge text-xl"></i>
+              <p class="text-sm">Organize</p>
+            </div>
+            <div
+              class="flex items-center gap-1 cursor-pointer hover:text-white">
+              <i class="bx bxs-downvote bx-rotate-270 text-xl"></i>
+              <p class="text-sm">Move</p>
+            </div>
+
+            <div
+              class="flex items-center gap-1 cursor-pointer hover:text-white">
+              <i class="bx bxs-share-alt text-xl"></i>
+              <p class="text-sm">Share</p>
+            </div>
+            <div
+              class="flex items-center gap-1 cursor-pointer hover:text-white">
+              <i class="bx bx-dots-horizontal-rounded text-xl"></i>
+              <p class="text-sm">More</p>
+            </div>
+          </div>
+          </div>
+          
+          <div class="flex items-center gap-2 text-gray-300">
+            <span
+              class="text-xl material-symbols-outlined cursor-pointer hover:text-white">
+              check_box_outline_blank
+            </span>
+            <span
+              class="text-xl material-symbols-outlined cursor-pointer hover:text-white">
+              window
+            </span>
+            <span
+              class="text-xl material-symbols-outlined cursor-pointer hover:text-white">
+              grid_on
+            </span>
+          </div>
+        </div>
+
+        <div 
+          class="flex flex-col lg:flex-row h-full w-full overscroll-none overflow-y-scroll  pb-5 gap-2">
+          <div class="flex h-full w-full gap-2">
+            <div class="flex flex-col gap-2 grow">
+              
+              <img class="rounded-md" src="assets/img-1.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-2.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-3.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-4.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-5.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-6.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-7.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-10.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-10.jpeg" alt="" />
+            </div>
+            <div class="flex flex-col gap-2 grow">
+              <img  class="rounded-md" src="assets/img-11.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-3.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-1.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-5.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-4.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-2.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-7.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-10.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-7.jpeg" alt="" />
+            </div>
+            <div class="flex flex-col gap-2 grow">
+              <img  class="rounded-md" src="assets/img-4.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-1.png" alt="" />
+              <img  class="rounded-md" src="assets/img-7.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-1.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-6.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-2.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-7.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-3.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-11.jpeg" alt="" />
+            </div>
+          </div>
+
+          <div class="flex h-full w-full gap-2">
+            <div class="flex flex-col gap-2 grow">
+              
+              <img class="rounded-md"  src="assets/img-5.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-7.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-1.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-10.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-2.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-7.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-11.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-3.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-11.jpeg" alt="" />
+            </div>
+            <div class="flex flex-col gap-2 grow">
+              <img  class="rounded-md" src="assets/img-4.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-1.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-7.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-1.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-5.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-2.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-7.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-11.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-2.jpeg" alt="" />
+            </div>
+            <div class="flex flex-col gap-2 grow">
+              <img class="rounded-md"  src="assets/img-10.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-11.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-7.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-1.jpeg" alt="" />
+              <img  class="rounded-md" src="assets/img-6.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-2.jpeg" alt="" />
+              <img src="assets/img-2.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-11.jpeg" alt="" />
+              <img class="rounded-md"  src="assets/img-10.jpeg" alt="" />
+            </div>
+            
+          </div>
+        </div>
+
+        
+          
+      </section>
+
+      <!-- right-nav -->
+      <section class="bg-sidebarColor basis-1/6 h-full px-2 hidden md:block lg:block">
+        <div
+          class="flex items-center text-gray-300 justify-end mr-2 h-10 cursor-pointer hover:text-white">
+          <span class="text-xl material-symbols-outlined"> close </span>
+          <p>Close</p>
+        </div>
+        <div
+          class="w-full h-12 flex gap-2 items-end pb-0 bg-navbarColor text-xs">
+          <p
+            class="rounded-t-md text-sm h-8 px-2 pt-1 ml-2 bg-sidebarColor text-gray-400 cursor-pointer hover:text-white">
+            Information
+          </p>
+          <p
+            class="text-sm p-1 h-8 text-gray-400 cursor-pointer hover:text-white">
+            Metadata
+          </p>
+        </div>
+        <div class="mt-5 flex flex-col justify-center items-center">
+          <img src="assets/img-3.jpeg" alt="" />
+          <h3 class="mt-1 text-gray-300">sampleimage.jpg</h3>
+        </div>
+
+        <div class="flex gap-2 mt-3 text-sm">
+          <div class="text-right w-1/2 text-gray-300 font-medium">
+            <p>Id</p>
+            <p>Vault</p>
+            <p>Date Uploaded</p>
+            <br />
+            <p>Uploaded by</p>
+            <p>File Extention</p>
+            <p>File size</p>
+            <p>Width</p>
+            <p>Height</p>
+            <p>Area of Interest</p>
+            <p>Tags</p>
+            <p>Discription</p>
+          </div>
+          <div class="w-1/2 text-gray-400 font-medium">
+            <p>724952</p>
+            <p>EmailGraphics</p>
+            <p>20/05/2023</p>
+            <p>23.04.24</p>
+            <p>Tarek</p>
+            <p>EmailGraphics</p>
+            <p>jpg</p>
+            <p>500</p>
+            <p>800</p>
+            <p>Yes</p>
+          </div>
+        </div>
+
+        <div class="mt-10 flex flex-col items-center">
+          <p class="text-base text-gray-300 font-medium">Published On</p>
+          <div
+            class="flex items-center gap-1 text-gray-300 hover:text-white cursor-pointer">
+            <p class="text-sm">View Publishes</p>
+            <span class="text-xl material-symbols-outlined"> publish </span>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <footer class="h-[3%] bg-navbarColor">
+      <div class="flex items-center py-1 justify-center text-gray-500">
+        <p class="text-sm text-gray-400 font-medium">Khaled Image Vault &copy; 2023</p>
+      </div>
+    </footer>
+  </body>
+</html>
