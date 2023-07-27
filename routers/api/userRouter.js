@@ -4,6 +4,8 @@ const UserModel = require("../../models/User");
 const jwt = require("jsonwebtoken");
 const userRouter = express.Router();
 const authenticateToken = require("../../middleware/auth");
+const {body, validationResult} = require("express-validator");
+
 
 // get a user profile
 
@@ -48,15 +50,31 @@ userRouter.get("/:id", async (req, res) => {
   }
 });
 
-userRouter.post("/add", async (req, res) => {
+userRouter.post(
+  "/add",
+  [
+    body('fname', 'First Name is required').notEmpty(),
+    body('lname', 'Last Name is required').notEmpty(),
+    body('email', 'Please enter a valid email').notEmpty().isEmail(),
+    body('age', 'Age is Optional').optional().isNumeric(),
+    body('password', 'Minimum length of password is 6').isLength({min: 6}),
+
+  ],
+  async (req, res) => {
   try {
+    const errors = validationResult(req);
+    if(!errors.isEmpty()) {
+      console.error(errors.message);
+      return res.status(400).json({ errors: errors });
+    }
+
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
     const password = hashedPassword;
     // const password = req.body.password;
     const userObj = await {
-      fName: req.body.fName,
-      lName: req.body.lName,
+      fname: req.body.fname,
+      lname: req.body.lname,
       email: req.body.email,
       age: req.body.age,
       password: password,
@@ -64,12 +82,11 @@ userRouter.post("/add", async (req, res) => {
 
     const user = await UserModel(userObj);
     await user.save();
-
     res.status(201).json({ user: user });
   } catch (err) {
     console.error(err.toString());
   }
-});
+}); 
 
 // Login user
 
