@@ -13,7 +13,7 @@ userRouter.get("/test", (req, res) => {
 
 // Create an user
 userRouter.post(
-  "/add",
+  "/add", 
   [
     body("fname", "First Name is required").notEmpty(),
     body("lname", "Last Name is required").notEmpty(),
